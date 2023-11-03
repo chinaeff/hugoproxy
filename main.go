@@ -54,7 +54,7 @@ func WorkerTest() {
 	for {
 		select {
 		case <-t.C:
-			err := os.WriteFile("/app/static/_index.md", []byte(content), 0644)
+			err := os.WriteFile("/app/content/_index.md", []byte(content), 0644)
 			if err != nil {
 				log.Println(err)
 			}
